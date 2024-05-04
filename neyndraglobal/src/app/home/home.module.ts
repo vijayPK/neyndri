@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EventCarouselComponent } from './event-carousel/event-carousel.component';
+import { CoursesComponent } from './courses/courses.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { EventCarouselComponent } from './event-carousel/event-carousel.componen
     HomeComponent,
     HeaderComponent,
     LandingPageComponent,
-    EventCarouselComponent
+    EventCarouselComponent,
+    CoursesComponent
   ],
   imports: [
     CommonModule,
