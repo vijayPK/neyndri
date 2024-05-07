@@ -8,6 +8,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EventCarouselComponent } from './event-carousel/event-carousel.component';
 import { CoursesComponent } from './courses/courses.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { AchievementsComponent } from './achievements/achievements.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { JobsComponent } from './jobs/jobs.component';
     LandingPageComponent,
     EventCarouselComponent,
     CoursesComponent,
-    JobsComponent
+    JobsComponent,
+    AchievementsComponent,
+    ContactUsComponent
   ],
   imports: [
     CommonModule,
