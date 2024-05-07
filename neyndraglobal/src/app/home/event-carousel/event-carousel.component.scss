@@ -1,0 +1,28 @@
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+    width: 350px;
+    color: #e2d4d4;
+    left: 130px;
+    top: 100px;
+}
+
+.carousel-height {
+    height: 500px;
+}
+
+@media screen and (max-width: 600px) {
+    .carousel-height {
+        height: 320px;
+    }
+    .position-absolute {
+        position: absolute;
+        width: 350px;
+        color: #e2d4d4;
+        left: 50px;
+        top: 20px;
+    }
+}
