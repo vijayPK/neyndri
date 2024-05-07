@@ -1,3 +1,13 @@
 .carousel-inner {
-    height: 400px;
+    height: 500px;
+}
+
+.card-container {
+    border: 1px solid;
+}
+
+@media screen and (max-width: 600px) {
+    .carousel-inner {
+        height: 300px;
+    }
 }
