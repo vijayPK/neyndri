@@ -1,0 +1,30 @@
+<div class="card-container m-2 p-2 rounded">
+    <div class="row">
+        <div class="col-12">
+            <ul class="nav nav-pills justify-content-center">
+                <li class="mx-3 item" [ngClass]="selectedtype == 'Trending' ? 'selected':''" (click)="typeChange('Trending')"><a>Trending Jobs</a></li>
+                <li class="mx-3 item" [ngClass]="selectedtype == 'TopPaying' ? 'selected':''" (click)="typeChange('TopPaying')"><a>Top Paying Jobs</a></li>
+                <li class="mx-3 item" [ngClass]="selectedtype == 'Skills' ? 'selected':''" (click)="typeChange('Skills')"><a>jobs based on skills</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mx-5 my-4 p-3">
+        <div class="col-lg-3 col-md-4" *ngFor="let job of trendingJobs; let i = index">
+            <div class="job m-2" [ngClass]="i%2==0 ? 'blue-background':'hash-background'">
+                <div class="container text-align-center">
+                    {{job}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-align-end">
+            <span>See all jobs ></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-align-center">
+            <span class="text-disabled">*Job metrics powered by chatGPT</span>
+        </div>
+    </div>
+</div>

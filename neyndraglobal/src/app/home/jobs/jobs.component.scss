@@ -1,0 +1,41 @@
+.item {
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
+.selected {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(203, 203, 44);
+}
+
+.rounded {
+    border-radius: 5px;
+    background-color: rgb(244, 237, 230);
+}
+
+.job {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.blue-background {
+    background-color: #141454;
+    border-radius: 5px;
+    color: white;
+}
+
+.hash-background {
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+
+.text-align-end {
+    text-align: end;
+}
