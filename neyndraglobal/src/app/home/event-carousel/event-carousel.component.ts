@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-carousel',
@@ -9,7 +10,7 @@ export class EventCarouselComponent implements OnInit{
 
   events: any[] = [];
 
-  constructor(){
+  constructor(private router: Router){
     this.events = [
       {
         img: 'assets/a.jpg',
@@ -31,5 +32,13 @@ export class EventCarouselComponent implements OnInit{
 
   ngOnInit(): void {
       
+  }
+
+  register(id: number){
+    this.router.navigate([`register/${id}`]);
+  }
+
+  knowMore(id: number){
+    this.router.navigate([`know-more/${id}`]);
   }
 }

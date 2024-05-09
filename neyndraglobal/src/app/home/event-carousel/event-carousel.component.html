@@ -5,8 +5,8 @@
         <div class="position-absolute">
             <h3>{{ events[2].title }}</h3>
             <p>{{ events[2].description }}</p>
-            <button class="btn btn-primary mx-2">Know more</button>
-            <button class="btn btn-primary">Register</button>
+            <button class="btn btn-primary mx-2" (click)="knowMore(1)">Know more</button>
+            <button class="btn btn-primary" (click)="register(1)">Register</button>
         </div>
       </div>
       <div class="carousel-item carousel-height">
@@ -14,8 +14,8 @@
         <div class="position-absolute">
             <h3>{{ events[0].title }}</h3>
             <p>{{ events[0].description }}</p>
-            <button class="btn btn-primary mx-2">Know more</button>
-            <button class="btn btn-primary">Register</button>
+            <button class="btn btn-primary mx-2" (click)="knowMore(2)">Know more</button>
+            <button class="btn btn-primary" (click)="register(2)">Register</button>
         </div>
       </div>
       <div class="carousel-item carousel-height">
@@ -23,8 +23,8 @@
         <div class="position-absolute">
             <h3>{{ events[1].title }}</h3>
             <p>{{ events[1].description }}</p>
-            <button class="btn btn-primary mx-2">Know more</button>
-            <button class="btn btn-primary">Register</button>
+            <button class="btn btn-primary mx-2" (click)="knowMore(3)">Know more</button>
+            <button class="btn btn-primary" (click)="register(3)">Register</button>
         </div>
       </div>
     </div>

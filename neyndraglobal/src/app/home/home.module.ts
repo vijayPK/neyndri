@@ -10,6 +10,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { AchievementsComponent } from './achievements/achievements.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { RegisterComponent } from './register/register.component';
+import { KnowMoreComponent } from './know-more/know-more.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     CoursesComponent,
     JobsComponent,
     AchievementsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    RegisterComponent,
+    KnowMoreComponent
   ],
   imports: [
     CommonModule,
