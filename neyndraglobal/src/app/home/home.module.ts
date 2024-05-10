@@ -12,6 +12,7 @@ import { AchievementsComponent } from './achievements/achievements.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RegisterComponent } from './register/register.component';
 import { KnowMoreComponent } from './know-more/know-more.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { KnowMoreComponent } from './know-more/know-more.component';
     AchievementsComponent,
     ContactUsComponent,
     RegisterComponent,
-    KnowMoreComponent
+    KnowMoreComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
