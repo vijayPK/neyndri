@@ -1,1 +1,167 @@
-<p>courses works!</p>
+ <div class="p-4 container">
+    <button  class="mx-2" (click)="changeColor(1)" [ngClass]=" activeButton == 1 ? 'btn btn-warning' : 'btn btn-secondary'">Individual</button>
+    <button class="mx-2" (click)="changeColor(2)" [ngClass]=" activeButton == 2 ? 'btn btn-warning' : 'btn btn-secondary'">Corporate</button>
+    <button class="mx-2" (click)="changeColor(3)" [ngClass]=" activeButton == 3 ? 'btn btn-warning' : 'btn btn-secondary'">Partner</button>
+    <button class="mx-2" (click)="changeColor(4)" [ngClass]=" activeButton == 4 ? 'btn btn-warning' : 'btn btn-secondary'">College</button>
+  </div>
+  
+ <!-- <div class="course-container p-5">
+    <div class="p-2 header-div">
+     <h4 ><b>Transforming your future!</b></h4>
+     <h6>Get started with your dream career with us</h6>
+    </div>
+
+    <div class="row ">
+      <div class="col-md-3" *ngFor="let course of courses">
+        <div class="card">
+          <img [src]="course.image" class="card-img-top" alt="Course Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ course.title }}</h5>
+            <p class="card-text">{{ course.description }}</p>
+            
+                <button class="btn btn-primary mx-2" >Register Now</button>
+                <button class="btn btn-primary" >Know More</button>
+             
+      
+               
+        
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
+  </div> -->
+  <div class="course-container p-5">
+  <div class="p-2 header-div">
+    <h4 ><b>Transforming your future!</b></h4>
+    <h6>Get started with your dream career with us</h6>
+   </div>
+  <div class="container" #container>
+    
+	<div class="left" *ngIf="totalPages > 1" (click)="currentPage != 1 && changePage(-1)" [ngClass]="{'disabled':currentPage === 1}"></div>
+	<div class="cards " [ngClass]="{'w-100': totalPages === 1}">
+		<div class="overflow" *ngIf="activeButton==1" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
+			<div class="card " *ngFor="let i of arr; let index = index" [ngStyle]="{'width': cardWidth}">
+				<span>{{i}}</span>
+                <div class="card m-0 ">
+                    <img [src]="courses[0].image" class="card-img-top" alt="Course Image">
+                    <div class="card-body px-0" [ngClass]="index%2==0?'bgBlue':'bgGrey'">
+                      <h5 class="card-title px-2">{{ courses[0].title }}</h5>
+                      <p class="card-text px-2">{{ courses[0].description }}</p>
+
+                      <div class="row m-0 p-0">
+                        <div class="col-6 m-0 p-0">
+                            <button class="btn btn-primary mx-2" >Register Now</button>
+                        </div>
+                        <div class="col-6 m-0 p-0">
+                            <button class="btn btn-primary" >Know More</button>
+                        </div>
+                       
+                        
+                       
+                      </div>
+                          
+                
+                         
+                  
+                    </div>
+                    </div>
+			</div>
+            
+		</div>
+        <div class="overflow" *ngIf="activeButton==2" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
+			<div class="card"  *ngFor="let i of arr1; let index = index" [ngStyle]="{'width': cardWidth}">
+				<span>{{i}}</span>
+                <div class="card m-0 ">
+                    <img [src]="courses[3].image" class="card-img-top" alt="Course Image">
+                    <div class="card-body px-0" [ngClass]="index%2==0?'bgBlue':'bgGrey'">
+                      <h5 class="card-title px-2">{{ courses[3].title }}</h5>
+                      <p class="card-text px-2">{{ courses[3].description }}</p>
+
+                      <div class="row m-0 p-0">
+                        <div class="col-6 m-0 p-0">
+                            <button class="btn btn-primary mx-2" >Register Now</button>
+                        </div>
+                        <div class="col-6 m-0 p-0">
+                            <button class="btn btn-primary" >Know More</button>
+                        </div>
+                       
+                        
+                       
+                      </div>
+                          
+                
+                         
+                  
+                    </div>
+                    </div>
+                
+			</div>
+		</div>
+        <div class="overflow" *ngIf="activeButton==3" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
+			<div class="card" *ngFor="let i of arr2; let index = index" [ngStyle]="{'width': cardWidth}">
+				<span>{{i}}</span>
+                <div class="card m-0 ">
+                    <img [src]="courses[1].image" class="card-img-top" alt="Course Image">
+                    <div class="card-body px-0" [ngClass]="index%2==0?'bgBlue':'bgGrey'">
+                      <h5 class="card-title px-2">{{ courses[1].title }}</h5>
+                      <p class="card-text px-2">{{ courses[1].description }}</p>
+
+                      <div class="row m-0 p-0">
+                        <div class="col-6 m-0 p-0">
+                            <button class="btn btn-primary mx-2" >Register Now</button>
+                        </div>
+                        <div class="col-6 m-0 p-0">
+                            <button class="btn btn-primary" >Know More</button>
+                        </div>
+                       
+                        
+                       
+                      </div>
+                          
+                
+                         
+                  
+                    </div>
+                    </div>
+			</div>
+		</div>
+        <div class="overflow" *ngIf="activeButton==4" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
+			<div class="card" *ngFor="let i of arr3; let index = index" [ngStyle]="{'width': cardWidth}">
+				<span>{{i}}</span>
+                <div class="card m-0 ">
+                    <img [src]="courses[2].image" class="card-img-top" alt="Course Image">
+                    <div class="card-body px-0" [ngClass]="index%2==0?'bgBlue':'bgGrey'">
+                      <h5 class="card-title px-2">{{ courses[2].title }}</h5>
+                      <p class="card-text px-2">{{ courses[2].description }}</p>
+
+                      <div class="row m-0 p-0">
+                        <div class="col-6 m-0 p-0">
+                            <button class="btn btn-primary mx-2" >Register Now</button>
+                        </div>
+                        <div class="col-6 m-0 p-0">
+                            <button class="btn btn-primary" >Know More</button>
+                        </div>
+                       
+                        
+                       
+                      </div>
+                          
+                
+                         
+                  
+                    </div>
+                    </div>
+			</div>
+		</div>
+	</div>
+	<div class="right" *ngIf="totalPages > 1" (click)="currentPage != totalPages && changePage(+1)"
+		[ngClass]="{'disabled':currentPage === totalPages}"></div>
+</div>
+<div class="row my-4">
+    <div class="col-12 text-align-end">
+        <span>Explore more courses ></span>
+    </div>
+</div>
+</div>
